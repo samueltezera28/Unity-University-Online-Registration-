@@ -79,7 +79,8 @@ ul {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
+    max-width: 1100px;
+    margin: auto;
 }
 
 
@@ -89,6 +90,7 @@ ul {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 400px;
+
 }
 
 .form {
