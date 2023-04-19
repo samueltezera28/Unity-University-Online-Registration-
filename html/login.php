@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $sql = mysqli_query($conn, "select HashedPassword from student_login where username='$username'");
     if ($row = mysqli_fetch_array($sql)) {
         if ($password == $row['HashedPassword']) {
-            header("location:../dashboard/index.htm");
+            header("location:../dashboard/index.php");
             exit();
         } else
             echo "invalid Password";
