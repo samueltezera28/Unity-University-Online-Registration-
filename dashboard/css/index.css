@@ -30,8 +30,12 @@ body {
     padding: 0;
 }
 
+i {
+    padding: 0 10px;
+}
+
 .nav li a {
-    display: block;
+    display: flex;
     color: #000;
     padding: 10px;
     text-decoration: none;
