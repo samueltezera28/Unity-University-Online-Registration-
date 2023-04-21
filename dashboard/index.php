@@ -23,36 +23,12 @@
                 <li><a href="#" onclick="showProfile()"><i class="fa fa-user"></i>My Profile</a></li>
             </ul>
         </div>
-        <div id="container">
+        <div id="container" class="container">
             <h2>Welcome to the Student Dashboard!</h2>
             <p></p>
         </div>
     </div>
-    <script>
-        function showHome() {
-            document.getElementById("container").innerHTML = "<h2>Home</h2><p>Welcome to your Home page.</p>";
-        }
-
-        function showPlanning() {
-            document.getElementById("container").innerHTML = "<h2>My Planning</h2><p>This is for planning</p>";
-        }
-
-        function showCourse() {
-            document.getElementById("container").innerHTML = "<h2>Course</h2><p>This is the Course page.</p>";
-        }
-
-        function showBooks() {
-            document.getElementById("container").innerHTML = "<h2>Books/Modules</h2><p>This is the books and modules page.</p>";
-        }
-
-        function showGrade() {
-            document.getElementById("container").innerHTML = "<h2>Grade</h2><p>This is your Grade page.</p>";
-        }
-
-        function showProfile() {
-            document.getElementById("container").innerHTML = "<h2>My Profile</h2><p>Here you can view and edit your profile.</p>";
-        }
-    </script>
+    <script src="./script/router.js"></script>
 </body>
 
 </html>
