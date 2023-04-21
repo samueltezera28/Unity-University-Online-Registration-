@@ -43,3 +43,28 @@ td {
     font-size: small;
 
 }
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+
+    th,
+    td {
+        padding: 5px;
+        height: auto;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+    .date {
+        font-size: 8px;
+        margin-top: 2px;
+        margin-right: 2px;
+    }
+}
