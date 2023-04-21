@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="./css/planning.css">
     <title>Student Schedule</title>
 </head>
 
@@ -19,33 +20,34 @@
         <tr>
             <td>
                 <div class="date">Jan 1</div>
-                OOP<br>
-                9:00 AM - 10:30 AM
+                <div class="title">OOP</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
+
             </td>
             <td>
                 <div class="date">Jan 2</div>
-                C++<br>
-                11:00 AM - 12:30 PM
+                <div class="title">C++</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 3</div>
-                Java<br>
-                8:00 AM - 9:30 AM
+                <div class="title">JAVA</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 4</div>
-                Datastructure<br>
-                10:00 AM - 11:30 AM
+                <div class="title">Statistic</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 5</div>
-                algorithm<br>
-                1:00 PM - 2:30 PM
+                <div class="title">Economics</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 6</div>
-                MATH<br>
-                2:00 PM - 3:30 PM
+                <div class="title">Advanced programming</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 7</div>
@@ -55,33 +57,34 @@
         <tr>
             <td>
                 <div class="date">Jan 1</div>
-                OOP<br>
-                9:00 AM - 10:30 AM
+                <div class="title">OOP</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
+
             </td>
             <td>
                 <div class="date">Jan 2</div>
-                C++<br>
-                11:00 AM - 12:30 PM
+                <div class="title">C++</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 3</div>
-                Java<br>
-                8:00 AM - 9:30 AM
+                <div class="title">JAVA</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 4</div>
-                Datastructure<br>
-                10:00 AM - 11:30 AM
+                <div class="title">Statistic</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 5</div>
-                algorithm<br>
-                1:00 PM - 2:30 PM
+                <div class="title">Economics</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 6</div>
-                MATH<br>
-                2:00 PM - 3:30 PM
+                <div class="title">Advanced programming</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 7</div>
@@ -91,33 +94,34 @@
         <tr>
             <td>
                 <div class="date">Jan 1</div>
-                OOP<br>
-                9:00 AM - 10:30 AM
+                <div class="title">OOP</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
+
             </td>
             <td>
                 <div class="date">Jan 2</div>
-                C++<br>
-                11:00 AM - 12:30 PM
+                <div class="title">C++</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 3</div>
-                Java<br>
-                8:00 AM - 9:30 AM
+                <div class="title">JAVA</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 4</div>
-                Datastructure<br>
-                10:00 AM - 11:30 AM
+                <div class="title">Statistic</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 5</div>
-                algorithm<br>
-                1:00 PM - 2:30 PM
+                <div class="title">Economics</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 6</div>
-                MATH<br>
-                2:00 PM - 3:30 PM
+                <div class="title">Advanced programming</div>
+                <div class="time">9:00 AM - 10:30 AM</div>
             </td>
             <td>
                 <div class="date">Jan 7</div>
