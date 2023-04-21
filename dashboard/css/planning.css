@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    vertical-align: top;
+    height: 100px;
+    position: relative;
+}
+
+th {
+    background-color: #ddd;
+}
+
+td {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 10px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.title {
+    margin-top: 5px;
+    background-color: aqua;
+    border-radius: 20cm;
+
+}
+
+.time {
+    margin-top: 10px;
+    font-size: small;
+
+}
