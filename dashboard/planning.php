@@ -1,3 +1,8 @@
+<?php
+include("./database.php")
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -9,127 +14,43 @@
 <body>
     <table>
         <tr>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
+            <th>No</th>
+            <th>COURSE TITLE</th>
+            <th>TIME SCHEDULE</th>
+            <th>LAB(ROOM)</th>
         </tr>
-        <tr>
-            <td>
-                <div class="date">Jan 1</div>
-                <div class="title">OOP</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
 
-            </td>
-            <td>
-                <div class="date">Jan 2</div>
-                <div class="title">C++</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 3</div>
-                <div class="title">JAVA</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 4</div>
-                <div class="title">Statistic</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 5</div>
-                <div class="title">Economics</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 6</div>
-                <div class="title">Advanced programming</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 7</div>
-                <span style="color: #ccc;">No Class</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="date">Jan 1</div>
-                <div class="title">OOP</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
+        <?php
+        $sql = "SELECT * FROM student_event";
+        $result = $conn->query($sql);
 
-            </td>
-            <td>
-                <div class="date">Jan 2</div>
-                <div class="title">C++</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 3</div>
-                <div class="title">JAVA</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 4</div>
-                <div class="title">Statistic</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 5</div>
-                <div class="title">Economics</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 6</div>
-                <div class="title">Advanced programming</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 7</div>
-                <span style="color: #ccc;">No Class</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="date">Jan 1</div>
-                <div class="title">OOP</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-
-            </td>
-            <td>
-                <div class="date">Jan 2</div>
-                <div class="title">C++</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 3</div>
-                <div class="title">JAVA</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 4</div>
-                <div class="title">Statistic</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 5</div>
-                <div class="title">Economics</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 6</div>
-                <div class="title">Advanced programming</div>
-                <div class="time">9:00 AM - 10:30 AM</div>
-            </td>
-            <td>
-                <div class="date">Jan 7</div>
-                <span style="color: #ccc;">No Class</span>
-            </td>
-        </tr>
+        if ($result->num_rows > 0) {
+            $no = 0;
+            while ($row = $result->fetch_assoc()) {
+                $no += 1;
+                echo "<tr>";
+                echo "<td>";
+                echo "<div>{$no}</div>";
+                echo "</td>";
+                echo "<td>";
+                echo "<div>{$row['event_title']}</div>";
+                echo "</td>";
+                echo "<td>";
+                echo "<div>{$row['time']}</div>";
+                echo "</td>";
+                echo "<td>";
+                echo "<div>{$row['location']}</div>";
+                echo "</td>";
+                echo "</tr>";
+            }
+        }
+        $conn->close();
+        ?>
 
     </table>
+
+
+
 </body>
 
 </html>
