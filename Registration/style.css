@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaner {
+  position: relative;
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 15px;
+  padding: 28px;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+.contaner h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600px;
+  color: #333;
+}
+.container h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+.contaner form {
+  position: relative;
+  margin-top: 20px;
+  min-height: 490px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.contaner form .form {
+  position: absolute;
+  transition: 0.3 ease;
+  background-color: #fff;
+}
+.contaner form .form.second {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+form.setActive .form.second {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+form.setActive .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+.contaner form .personal-details {
+  margin-bottom: 10px;
+}
+.contaner form .info {
+  font-size: 25px;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  margin: 6px 0;
+}
+.contaner form .form-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contaner form .form-field .inpit-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4px 0px;
+}
+.inpit-field label {
+  font-size: 12px;
+  font-weight: 600px;
+  color: #333;
+}
+.inpit-field input {
+  height: 42px;
+  padding: 0 15px;
+  outline: none;
+  border: 2px solid #aaaa;
+}
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+.container form button,
+.btn,
+.bbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #4070f4;
+  transition: all 0.3 linear;
+  cursor: pointer;
+  border: none;
+  margin: 50px 2px;
+}
+.btn:hover {
+  background-color: #002ead;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttons button,
+.bbtn {
+  margin-right: 14px;
+}
+.erro {
+  color: #002ead;
+}
