@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="icon" href="/img/unity.png">
+</head>
+<body>
+
+    <nav>
+        <img src="/img/u.png" alt="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="announcement.html">Announcement</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+            <i id="menu-btn" class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="about-home">
+        <h2>About Unity University</h2>
+    </section>
+
+    <section id="home-container">
+        <div class="about-img">
+            <img src="/img/unity.png" alt="">
+        </div>
+
+        <div class="about-text">
+            <h2>About Unity University</h2>
+            <p>Unity University is a private university in Ethiopia. <br>
+        It is the first privately owned institute of higher learning to be awarded  full-fledged university <br>
+        status in Ethiopia by the Ministry of Education. It is also the first private university in the country <br>
+        to offer postgraduate programs.Established in 1991. In March 1998 the institute was upgraded to a college level,
+        following its achievements in education, becoming the first privately owned college in Ethiopia. <br>
+        </p>
+        </div>
+    </section>
+
+    <section id="trust">
+        <h1>Trusted By</h1>
+        <p> We are proud to be trusted by a variety of stakeholders, including:</p>
+        <div class="trust-img">
+            <img src="/img/moe.jpg" alt="">
+            <img src="/img/moshe.jpg" alt="">
+            <img src="/img/mint.jpg" alt="">
+        </div>
+
+    </section>
+
+     <footer>
+        <div class="footer-col">
+            <h3>Others</h3>
+            <li>Research</li>
+           <li>Vacancy</li>
+           <li>Terms of Service</li>
+           <li>Privacy Policy</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Programs</h3>
+           <li>All Programs</li>
+           <li>Undergraduate Programs</li>
+           <li>Postgraduate</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Important Links</h3>
+            <li>Home</li>
+            <li>About</li>
+            <li>Announcement</li>
+            <li>Login</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact us</h3>
+            <li>Email: info@uu.edu.et</li>
+            <li>Phone: +251901010101</li>
+            <li>Website: uu.edu.et</li>
+        </div>
+
+        
+        <div class="footer-col">
+           <h3>Newsletter</h3>
+           <p>You can trust us.</p>
+           <div class="subscribe">
+            <input type="text" placeholder="Your Email Address">
+            <a href="#" class="yellow">SUBSCRIBE</a>
+           </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 | Unity University All Rights Reserved</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+         </div>
+     </footer>
+
+
+     <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').removeClass('active')
+        });
+     </script>
+
+</body>
+
+</html>
