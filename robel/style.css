@@ -96,7 +96,6 @@ nav .navigation ul li a:hover{
     color: #fff;
     letter-spacing: 1px;
     font-size: 50px;
-    /* font-size: 2.2rem; */
     margin-top: 80px;
 }
 
@@ -382,8 +381,6 @@ footer .pro-links i:hover{
 }
 
 #home-container .about-text{
-    /* width: 40%; */
-    /* padding: 70px; */
     text-align: left;
 }
 
