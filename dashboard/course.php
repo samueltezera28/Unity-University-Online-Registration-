@@ -1,3 +1,7 @@
+<?php
+include("database.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -20,41 +24,20 @@
             <h3>Book Module 1</h3>
             <a href="path_to_book_module1.pdf" class="download-button">Download</a>
         </li>
-        <li class="resource-item">
-            <img src="../img/book2.jpeg" alt="Book 2" class="resource-image">
-            <h3>advanceddatabase</h3>
-            <a href="path_to_book_module2.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book3.jpeg" alt="Book 3" class="resource-image">
-            <h3>Book Module 3</h3>
-            <a href="path_to_book_module3.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book1.jpeg" alt="Book 1" class="resource-image">
-            <h3>Book Module 1</h3>
-            <a href="path_to_book_module1.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book2.jpeg" alt="Book 2" class="resource-image">
-            <h3>Book Module 2</h3>
-            <a href="path_to_book_module2.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book3.jpeg" alt="Book 3" class="resource-image">
-            <h3>Book Module 3</h3>
-            <a href="path_to_book_module3.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book1.jpeg" alt="Book 1" class="resource-image">
-            <h3>Book Module 1</h3>
-            <a href="path_to_book_module1.pdf" class="download-button">Download</a>
-        </li>
-        <li class="resource-item">
-            <img src="../img/book2.jpeg" alt="Book 2" class="resource-image">
-            <h3>Book Module 2</h3>
-            <a href="path_to_book_module2.pdf" class="download-button">Download</a>
-        </li>
+        <?php
+        $sql = "SELECT * FROM book_download";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo " <li class=\"resource-item\">";
+                echo "<img src=\"{$row['file_img']}\" alt=\"{$row['title']}\" class=\"resource-image\">";
+                echo "<h3>{$row['title']}</h3>";
+                echo " <a href=\"{$row['file_pdf']}\" class=\"download-button\">Download</a>";
+                echo " </li>";
+            }
+        }
+        ?>
 
     </ul>
 
