@@ -15,7 +15,7 @@ include("database.php");
 
     <div class="search-bar">
         <input type="text" id="search-input" placeholder="Search by title or instructor name">
-        <button onclick="searchResources()">Search</button>
+        <button onclick="searchResources() ">Search</button>
     </div>
 
     <ul class="resource-list">
@@ -43,14 +43,19 @@ include("database.php");
 
     <script>
         function searchResources() {
+            console.log("heyy");
             var input = document.getElementById("search-input").value.toLowerCase();
             var resources = document.getElementsByClassName("resource-item");
+
+            console.log("Search Input:", input);
+            console.log("Total Resources:", resources.length);
 
             for (var i = 0; i < resources.length; i++) {
                 var resource = resources[i];
                 var link = resource.getElementsByTagName("a")[0];
                 var title = link.previousElementSibling.innerHTML.toLowerCase();
 
+                console.log("Resource Title:", title);
                 if (title.includes(input)) {
                     resource.style.display = "block";
                 } else {

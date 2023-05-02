@@ -127,7 +127,7 @@ function showProfile() {
     };
 
     // Open the AJAX request and specify the URL of the HTML file to fetch
-    xhttp.open("GET", "./temp.html", true);
+    xhttp.open("GET", "./myProfile.php", true);
 
     // Send the AJAX request
     xhttp.send();
