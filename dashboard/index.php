@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,6 +29,7 @@
         </div>
         <div id="container" class="container">
             <h2>Welcome to the Student Dashboard!</h2>
+            <h2>hello <?php echo $_SESSION['student_id'] ?> </h2>
             <p></p>
         </div>
     </div>
