@@ -39,7 +39,11 @@ session_start();
                 <div class="form-field">
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password" autocomplete="off">
+                    <p id="text">WARNING! Caps lock is ON</p>
                     <small id="error-msg"></small>
+                </div>
+                <div class="form-field">
+
                 </div>
                 <div class="form-field">
                     <input type="submit" value="Log in" id="sub" name="submit">
@@ -48,7 +52,17 @@ session_start();
         </div>
 
     </div>
-
+    <script>
+        var input = document.getElementById("password");
+        var text = document.getElementById("text");
+        input.addEventListener("keyup", function(event) {
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none"
+            }
+        });
+    </script>
     <!-- <script src="../script/login.js"></script> -->
 </body>
 
