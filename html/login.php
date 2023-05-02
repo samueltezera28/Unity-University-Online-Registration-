@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,16 +57,18 @@
 <?php
 $conn = "";
 
-$conn = mysqli_connect("localhost", "root", "", "student");
+$conn = mysqli_connect("localhost", "root", "", "unity_university");
 
 if (isset($_POST['submit'])) {
     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+
     // $username = $_POST['username'];
     // $password = $_POST['password'];
     $sql = mysqli_query($conn, "select HashedPassword from student_login where username='$username'");
     if ($row = mysqli_fetch_array($sql)) {
         if ($password == $row['HashedPassword']) {
+            $_SESSION['student_id'] = "{$username}";
             header("location:../dashboard/index.php");
             exit();
         } else
