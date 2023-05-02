@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff;
@@ -142,6 +144,10 @@ ul {
     color: var(--error-color);
 }
 
+#text {
+    display: none;
+    color: red;
+}
 
 /* button */
 .btn {
