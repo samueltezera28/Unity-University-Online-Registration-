@@ -17,7 +17,7 @@ session_start();
 <body>
     <div class="container">
         <div class="main-nav">
-            <img src="/img/Unity_University_logo.png" alt="" class="logo">
+            <img src="../img/Unity_University_logo.png" alt="" class="logo">
             <ul class="main-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Apply</a></li>
@@ -43,7 +43,7 @@ session_start();
                     <small id="error-msg"></small>
                 </div>
                 <div class="form-field">
-
+                    <button><a href="./forget_pass.php">forget password ?</a></button>
                 </div>
                 <div class="form-field">
                     <input type="submit" value="Log in" id="sub" name="submit">
