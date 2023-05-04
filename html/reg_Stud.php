@@ -9,7 +9,7 @@ $Emrge_Name = $Emrge_phone = $Emrge_email = "";
 $Emrge_Namerr = $Emrge_phonerr = $Emrge_emailrr = "";
 if (isset($_POST['submit'])) {
     if (empty($_POST["Fname"])) {
-        $Fnamerr = "First name is ";
+        $Fnamerr = "*";
     }
     if (empty($_POST["Lname"])) {
         $Lnamerr = "last name is  ";
@@ -102,6 +102,10 @@ if (isset($_POST['submit'])) {
         /* 
         SAMI YOUR DATA BASE IS DEFINED HERE
         */
+
+        // INSERT INTO `student_apply` (`id`, `Fname`, `Lname`, `email`, `dob`, `Gender`, `Nationlity`, `P.no`, `po.box`, `city`, `house_Number`, `r/u`, `Educational_backgroud`, `division`, `departement_title`, `Application_type`, `paper`, `entrance_result`, `student_img`, `student_transcript`, `stendet_matric_transcript`, `emerg_fname`, `emerg_p.no`, `emerg_email`) 
+        // VALUES (NULL, 'abebe', 'solomon', 'abebe@gmail.com', '2013-05-30', 'M', 'ethiopian', '0945875698', '1000', 'adama', '1525', 'rular', 'tvet', 'regular', 'computer science', 'undergraduate', 'no', '500', NULL, NULL, NULL, 'solomon', '0911548569', 'solomon@gmail.com');
+
     }
 }
 ?>
@@ -195,7 +199,7 @@ if (isset($_POST['submit'])) {
                                 <option>Urban</option>
                             </select>
                         </div>
-                        <button class="btn">
+                        <button name="submit" type="submit" class="btn">
                             <span> Next</span>
                         </button>
                     </div>
