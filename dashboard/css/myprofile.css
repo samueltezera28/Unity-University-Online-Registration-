@@ -1,0 +1,51 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+    text-align: center;
+
+    /* Half of the viewport height */
+}
+
+.profile-section {
+
+    color: white;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+
+    /* Occupy full width of container */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.myprofile {
+    text-align: center;
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.student-data {
+    font-size: larger;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 30px;
+    margin: auto;
+}
+
+.student-data p span {
+    font-weight: bold;
+}
