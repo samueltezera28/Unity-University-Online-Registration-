@@ -115,13 +115,15 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/reg_Stud.css">
+
 </head>
 
-<body style="background-image: url('./img/20230428_175735.jpg');
+<body style="background-image: url('../img/background.jpg');
  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;">
+
     <div class="contaner">
         <h3>STUDENT SUBMISSION FORM</h3>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -300,7 +302,7 @@ if (isset($_POST['submit'])) {
     </form>
     </div>
     <div>
-        <script src="change.js"></script>
+        <script src="../script/change.js"></script>
 </body>
 
 </html>

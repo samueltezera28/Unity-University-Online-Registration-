@@ -3,12 +3,14 @@
   padding: 0;
   box-sizing: 0;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contaner {
   position: relative;
   background: #fff;
@@ -19,12 +21,14 @@ body {
   border-radius: 6px;
   opacity: 0.9;
 }
+
 .contaner h3 {
   position: relative;
   font-size: 20px;
   font-weight: 600px;
   color: #333;
 }
+
 .container h3::before {
   content: "";
   position: absolute;
@@ -35,6 +39,7 @@ body {
   border-radius: 8px;
   background-color: #4070f4;
 }
+
 .contaner form {
   position: relative;
   margin-top: 20px;
@@ -42,16 +47,19 @@ body {
   overflow: hidden;
   background-color: #fff;
 }
+
 .contaner form .form {
   position: absolute;
   transition: 0.3 ease;
   background-color: #fff;
 }
+
 .contaner form .form.second {
   opacity: 0;
   pointer-events: none;
   transform: translateX(100%);
 }
+
 form.setActive .form.second {
   opacity: 1;
   pointer-events: auto;
@@ -63,9 +71,11 @@ form.setActive .form.first {
   pointer-events: none;
   transform: translateX(-100%);
 }
+
 .contaner form .personal-details {
   margin-bottom: 10px;
 }
+
 .contaner form .info {
   font-size: 25px;
   display: block;
@@ -74,12 +84,14 @@ form.setActive .form.first {
   margin-bottom: 8px;
   margin: 6px 0;
 }
+
 .contaner form .form-field {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .contaner form .form-field .inpit-field {
   display: flex;
   width: calc(100% / 3 - 15px);
@@ -87,17 +99,20 @@ form.setActive .form.first {
   justify-content: space-between;
   margin: 4px 0px;
 }
+
 .inpit-field label {
   font-size: 12px;
   font-weight: 600px;
   color: #333;
 }
+
 .inpit-field input {
   height: 42px;
   padding: 0 15px;
   outline: none;
   border: 2px solid #aaaa;
 }
+
 .input-field input,
 select {
   outline: none;
@@ -110,6 +125,7 @@ select {
   height: 42px;
   margin: 8px 0;
 }
+
 .container form button,
 .btn,
 .bbtn {
@@ -128,17 +144,59 @@ select {
   border: none;
   margin: 50px 2px;
 }
+
 .btn:hover {
   background-color: #002ead;
 }
+
 .buttons {
   display: flex;
   align-items: center;
 }
+
 .buttons button,
 .bbtn {
   margin-right: 14px;
 }
+
 .erro {
   color: #002ead;
+}
+
+/* new */
+
+.containerr {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.main-nav .logo {
+  /* padding-top: 10px; */
+  width: 100px;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li a {
+  padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px solid #262626;
 }
