@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
             $mail->Port        = '465';
             $mail->AddAddress($email_id);
             $mail->Username   = "devsammy74@gmail.com";
-            $mail->Password   = "devsammy74123";
+            $mail->Password   = "devsammy74";
             $mail->SetFrom('devsammy74@gmail.com', 'sammy dev');
             $mail->AddReplyTo("devsammy74@gmail.com", "sammy dev");
             $mail->Subject    = $subject;
