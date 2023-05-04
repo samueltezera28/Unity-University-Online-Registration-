@@ -1,6 +1,6 @@
 <?php
 include_once('../dashboard/database.php');
-require_once '../mailer/class.phpmailer.php';
+require_once('../mailer/class.phpmailer.php');
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +50,15 @@ require_once '../mailer/class.phpmailer.php';
 </html>
 
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 $mail = new PHPMailer(true);
 if (isset($_POST['submit'])) {
     $user_id = $_POST['userid'];
+
     $result = mysqli_query($conn, "SELECT * FROM student_login where username ='" . $_POST['userid'] . "'");
     $row = mysqli_fetch_assoc($result);
     $fetch_user_id = $row['username'];
@@ -67,23 +73,24 @@ if (isset($_POST['submit'])) {
         try {
             $mail->IsSMTP();
             $mail->isHTML(true);
-            $mail->SMTPDebug  = 0;
+            $mail->SMTPDebug  = 3;
             $mail->SMTPAuth   = true;
             $mail->SMTPSecure = "ssl";
             $mail->Host       = "smtp.gmail.com";
             $mail->Port        = '465';
             $mail->AddAddress($email_id);
             $mail->Username   = "devsammy74@gmail.com";
-            $mail->Password   = "";
-            $mail->SetFrom('devsammy74@gmail.com', 'Unity University');
-            $mail->AddReplyTo("devsammy74@gmail.com", "Unity University");
+            $mail->Password   = "devsammy74123";
+            $mail->SetFrom('devsammy74@gmail.com', 'sammy dev');
+            $mail->AddReplyTo("devsammy74@gmail.com", "sammy dev");
             $mail->Subject    = $subject;
             $mail->Body    = $txt;
             $mail->AltBody    = $txt;
-
+            $mail->send();
             if ($mail->Send()) {
 
                 $msg = "Hi, Your mail successfully sent to" . $email . " ";
+                echo "$msg";
             }
         } catch (phpmailerException $ex) {
             $msg = "<div class='alert alert-warning'>" . $ex->errorMessage() . "</div>";
