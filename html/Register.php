@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./css/SA.CSS" />
+  <link rel="stylesheet" href="../css/SA.CSS" />
 </head>
 
 <body>
   <div class="container">
     <nav>
-      <img src="./img/unity.png" alt="">
+      <img src="../img/unity.png" alt="">
       <div class="navigation">
         <ul>
           <i id="menu-close" class="fas fa-times"></i>
           <li><a class="active" href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="announcement.html">Announcement</a></li>
-          <li><a href="#">Register</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="./Register.php">Register</a></li>
+          <li><a href="./login.php">Login</a></li>
         </ul>
         <i id="menu-btn" class="fas fa-bars"></i>
       </div>
@@ -38,13 +38,13 @@
         </button>
         <ul data-slides>
           <li class="slide" data-active>
-            <img src="./img/49f4f4fe699b741899c1c26b5c85daf43a282acf.jpg" alt="Nature Image #1" />
+            <img src="../img/49f4f4fe699b741899c1c26b5c85daf43a282acf.jpg" alt="Nature Image #1" />
           </li>
           <li class="slide">
-            <img src="./img/school.jpg" alt="Nature Image #2" />
+            <img src="../img/school.jpg" alt="Nature Image #2" />
           </li>
           <li class="slide">
-            <img src="./img/adf.jpg" alt="Nature Image #3" />
+            <img src="../img/adf.jpg" alt="Nature Image #3" />
           </li>
         </ul>
       </div>
@@ -181,6 +181,6 @@ into college credit.
     </footer>
 </body>
 </div>
-<script src="./slide.js"></script>
+<script src="../script/slide.js"></script>
 
 </html>

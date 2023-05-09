@@ -1,5 +1,5 @@
 <?php
-include('../database.php');
+// include('../database.php');
 $Fname = $Lname = $B_date = $password = $Nationality = "";
 $email = $gender = $comment = $website = $Phon_num = $POB = $Place = $kebele = $City = $result = "";
 $Edu_status = $division = $Department = $App_type = $reserch = $Exam_R = $Paper = $FileA = "";
@@ -28,16 +28,7 @@ if (isset($_POST['submit'])) {
     $Emrge_email = filter_input(INPUT_POST, "E_email", FILTER_SANITIZE_EMAIL);
     $result = filter_input(INPUT_POST, "ExamResult", FILTER_SANITIZE_NUMBER_INT);
 }
-$sql = "SELECT * FROM studinfo WHERE PASSWORD='$password' && NAME='$name'";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    $error[] = "user already exist!";
-} else {
-    $insert = "INSERT INTO studinfo (name,email,password) VALUES('$name','$email','$password')";
-    mysqli_query($conn, $insert);
-    // header("location:login.php");
-    // echo mysqli_num_rows($result);
-}
+// sami melkew database uncombatable nw be ene sertwal bante rase astekaklew
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,21 +38,21 @@ if (mysqli_num_rows($result) > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reg.css">
+    <link rel="stylesheet" href="../css/reg.css">
 </head>
 
 <body>
     <div>
         <nav>
-            <img src="./img/unity.png" alt="">
+            <img src="../img/unity.png" alt="">
             <div class="navigation">
                 <ul>
                     <i id="menu-close" class="fas fa-times"></i>
                     <li><a class="active" href="home.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="announcement.html">Announcement</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="./Register.php">Register</a></li>
+                    <li><a href="./login.php">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -256,7 +247,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         </div>
     </form>
-    <script src="./change.js"></script>
+    <script src="../script/change.js"></script>
 </body>
 
 
