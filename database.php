@@ -19,10 +19,10 @@ $password = "";
 $dbname = "student";
 $db_server = "localhost";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-// $conn = new mysqli($servername, $username, $password, $dbname);
-// if ($conn) {
-//     echo "you are connected";
-// }
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn) {
+    echo "you are connected";
+}
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
