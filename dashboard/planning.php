@@ -44,7 +44,7 @@ include("./database.php")
                 echo "</tr>";
             }
         }
-        $conn->close();
+
         ?>
 
     </table>
