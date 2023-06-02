@@ -28,9 +28,9 @@ session_start();
             </ul>
         </div>
         <div id="container" class="container">
-            <h2>Welcome to the Student Dashboard!</h2>
-            <h2>hello <?php echo $_SESSION['student_id'] ?> </h2>
-            <p></p>
+            <!-- <h2>Welcome to the Student Dashboard!</h2>
+            <h2>hello  </h2>
+            <p></p> -->
         </div>
     </div>
     <script src="./script/router.js"></script>
