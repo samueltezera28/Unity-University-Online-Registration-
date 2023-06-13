@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
     if ($row = mysqli_fetch_array($sql)) {
         if ($password == $row['HashedPassword']) {
             $_SESSION['student_id'] = "{$username}";
-            header("location:../dashboard/index.php");
+            header("location:../dashboard/home.php");
             exit();
         } else
             echo '<script>document.getElementById("error-msg").innerHTML = "Invalid Password";</script>';
