@@ -14,7 +14,7 @@ h2 {
     margin-top: 20px;
 }
 
-.containeer {
+.container-home {
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -99,6 +99,72 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
+
+title {
+    color: #f5f5f5;
+}
+
 .button:hover {
     background-color: #3e8e41;
+}
+
+
+
+
+
+/* index css added here  */
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container-wrapper {
+    display: flex;
+    height: 100vh;
+    /* height: calc(100vh - 40px); */
+
+}
+
+.nav {
+    width: 20%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    padding: 0 10px;
+}
+
+.nav li a {
+    display: flex;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav li a:hover {
+    background-color: #ddd;
+}
+
+#container {
+    flex: 1;
+    height: 100%;
+    padding: 20px;
 }
