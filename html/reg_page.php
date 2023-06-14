@@ -32,8 +32,7 @@ if (isset($_POST['submit'])) {
     VALUES (NULL,'$Fname','$Lname','$email','$B_date','$gender','$Nationality','$Phon_num',' $POB',' $City','$kebele','$HouseNo','$Place',' $Edu_status',' $division',' $Department',
     '$App_type','$reserch',' $result',' $image','$FileA','$Emrge_Name ','$Emrge_phone',' $Emrge_email')";
     if (mysqli_query($conn, $sql)) {
-        echo "accepted faddddddddddddddddddddddddddddddddddddd";
-        echo "daasddasdas0";
+        header('Location: ');
     }
 }
 
