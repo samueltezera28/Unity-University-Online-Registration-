@@ -1,5 +1,4 @@
 <?php
-// include('../database.php');
 include('../dashboard/database.php');
 $Fname = $Lname = $B_date = $Nationality = $HouseNo = $image = "";
 $email = $gender = $comment = $website = $Phon_num = $POB = $Place = $kebele = $City = $result = "";
@@ -37,7 +36,7 @@ if (isset($_POST['submit'])) {
         echo "daasddasdas0";
     }
 }
-// sami melkew database uncombatable nw be ene sertwal bante rase astekaklew
+
 
 ?>
 
@@ -114,10 +113,7 @@ if (isset($_POST['submit'])) {
                         <label>City</label>
                         <input name="city" required type="text" class="input">
                     </div>
-                    <!-- <div class="inputfield">
-                        <label>Kebele</label>
-                        <input name="Kebele" required type="text" class="input">
-                    </div> -->
+
                     <div class="inputfield">
                         <label>Address</label>
                         <input name="address" required type="text" class="input">
@@ -256,9 +252,6 @@ if (isset($_POST['submit'])) {
                 <div class="inputfield">
                     <input type="submit" name="submit" value="Register" class="btn">
                 </div>
-                <!-- <div class="inputfield">
-                <button class="btn" name="submit">Register</button>
-            </div> -->
             </div>
         </div>
         </div>
