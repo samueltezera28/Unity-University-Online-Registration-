@@ -1,6 +1,7 @@
 <?php
 // include('../database.php');
-$Fname = $Lname = $B_date = $password = $Nationality = "";
+include('../dashboard/database.php');
+$Fname = $Lname = $B_date = $Nationality = $HouseNo = $image = "";
 $email = $gender = $comment = $website = $Phon_num = $POB = $Place = $kebele = $City = $result = "";
 $Edu_status = $division = $Department = $App_type = $reserch = $Exam_R = $Paper = $FileA = "";
 $Emrge_Name = $Emrge_phone = $Emrge_email = "";
@@ -11,7 +12,8 @@ if (isset($_POST['submit'])) {
     $email = filter_input(INPUT_POST, "Email", FILTER_SANITIZE_EMAIL);
     $gender = filter_input(INPUT_POST, "gender", FILTER_SANITIZE_SPECIAL_CHARS);
     $B_date = $_POST["Bdate"];
-    $password = md5($_POST['password']);
+    $image = $_POST["image"];
+    $HouseNo = filter_input(INPUT_POST, "Houseno", FILTER_SANITIZE_NUMBER_INT);
     $Phon_num = filter_input(INPUT_POST, "Phone", FILTER_SANITIZE_NUMBER_INT);
     $City = filter_input(INPUT_POST, "City", FILTER_SANITIZE_SPECIAL_CHARS);
     $POB = filter_input(INPUT_POST, "PoBox", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -27,9 +29,18 @@ if (isset($_POST['submit'])) {
     $Emrge_phone = filter_input(INPUT_POST, "E_phone", FILTER_SANITIZE_NUMBER_INT);
     $Emrge_email = filter_input(INPUT_POST, "E_email", FILTER_SANITIZE_EMAIL);
     $result = filter_input(INPUT_POST, "ExamResult", FILTER_SANITIZE_NUMBER_INT);
+    $sql = "INSERT INTO `student_apply` (`App_id`, `Fname`, `Lname`, `email`, `dob`, `Gender`, `Nationlity`, `P.no`, `po.box`, `city`,`Kebele`, `house_Number`, `r/u`, `Educational_backgroud`, `division`, `departement_title`, `Application_type`, `paper`, `entrance_result`, `student_img`, `student_transcript`, `emerg_fname`, `emerg_p.no`, `emerg_email`)
+    VALUES (NULL,'$Fname','$Lname','$email','$B_date','$gender','$Nationality','$Phon_num',' $POB',' $City','$kebele','$HouseNo','$Place',' $Edu_status',' $division',' $Department',
+    '$App_type','$reserch',' $result',' $image','$FileA','$Emrge_Name ','$Emrge_phone',' $Emrge_email')";
+    if (mysqli_query($conn, $sql)) {
+        echo "accepted faddddddddddddddddddddddddddddddddddddd";
+        echo "daasddasdas0";
+    }
 }
 // sami melkew database uncombatable nw be ene sertwal bante rase astekaklew
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,10 +83,7 @@ if (isset($_POST['submit'])) {
                         <label>Last Name</label>
                         <input name="Lname" required type="text" class="input">
                     </div>
-                    <div class="inputfield">
-                        <label>Password</label>
-                        <input name="Password" required type="password" class="input">
-                    </div>
+
                     <div class="inputfield">
                         <label>Birth Date</label>
                         <input name="Bdate" required type="date" class="input" placeholder="Birth Date">
@@ -100,27 +108,31 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="inputfield">
                         <label>Phone Number</label>
-                        <input name="Phone" required type="text" class="input">
+                        <input name="Phone" required type="number" class="input">
                     </div>
                     <div class="inputfield">
                         <label>City</label>
                         <input name="city" required type="text" class="input">
                     </div>
+                    <!-- <div class="inputfield">
+                        <label>Kebele</label>
+                        <input name="Kebele" required type="text" class="input">
+                    </div> -->
                     <div class="inputfield">
                         <label>Address</label>
                         <input name="address" required type="text" class="input">
                     </div>
                     <div class="inputfield">
                         <label>Postal Code</label>
-                        <input name="PoBox" required type="text" class="input">
+                        <input name="PoBox" required type="number" class="input">
                     </div>
                     <div class="inputfield">
                         <label for="">House NO</label>
-                        <input name="Houseno" class="input" name="House No" required type="text" placeholder="House.num">
+                        <input name="Houseno" class="input" name="House No" required type="number" placeholder="House.num">
                     </div>
                     <div class="inputfield">
                         <label for="">zone,keble</label>
-                        <input class="input" name="kebele" name="Kebele" required type="text" placeholder="kebele">
+                        <input class="input" name="Kebele" required type="text" placeholder="kebele">
                     </div>
                     <div class="inputfield">
                         <label for="">Were did you come from </label>
@@ -133,7 +145,7 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                     <div class="inputfield">
-                        <input id="btn1" type="submit" value="Next Page" class="btn">
+                        <button id="btn1" type="button" class="btn">Next Page</button>
                     </div>
                 </div>
             </div>
@@ -212,6 +224,10 @@ if (isset($_POST['submit'])) {
                     <label for="">Attache your paper </label>
                     <input class="input" type="file" required name="file">
                 </div>
+                <div class="inputfield">
+                    <label for="">Attache your Image </label>
+                    <input class="input" type="file" required name="image">
+                </div>
                 <div class="title">
                     Person incase of Emrgency
                 </div>
@@ -235,7 +251,7 @@ if (isset($_POST['submit'])) {
                     <p>Agreed to terms and conditions</p>
                 </div>
                 <div class="inputfield">
-                    <input id="btn2" type="submit" value="Back" class="btn">
+                    <button id="btn2" type="button" class="btn">Back</button>
                 </div>
                 <div class="inputfield">
                     <input type="submit" name="submit" value="Register" class="btn">
