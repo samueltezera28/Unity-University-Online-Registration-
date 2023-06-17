@@ -49,6 +49,29 @@ include("./database.php")
 
     </table>
 
+    <div class="key-note">
+        <p>Key/Note:</p>
+        <ol>
+            <div class="left">
+                <li>8:30 - 9:25 AM</li>
+                <li>9:30 - 10:25 AM</li>
+                <li>10:30 - 11:25 AM</li>
+                <li>11:30 - 12:25 AM</li>
+            </div>
+
+            <div class="right">
+                <li>1:30 - 2:25 PM</li>
+                <li>2:30 - 3:25 PM</li>
+                <li>3:30 - 4:25 PM</li>
+                <li>4:30 - 5:25 PM</li>
+            </div>
+
+
+
+            <!-- Add more time slots if needed -->
+        </ol>
+    </div>
+
 
 
 </body>
