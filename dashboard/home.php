@@ -114,7 +114,7 @@ $sql1 = "SELECT * FROM `upcomming events` where student_id={$_SESSION['student_i
 
                         <!-- <li>Event 1</li> -->
                     </ul>
-                    <a href="#" class="button">View All Events</a>
+                    <a href="#" onclick="showevents()" class="button">View All Events</a>
                 </div>
                 <div class="right">
                     <h2>My Courses</h2>
