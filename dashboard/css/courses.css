@@ -16,3 +16,23 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+.gpa-calculator {
+    margin-top: 20px;
+}
+
+.gpa-calculator input[type="number"] {
+    padding: 5px;
+}
+
+.gpa-calculator button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.gpa-calculator button:hover {
+    background-color: #45a049;
+}
