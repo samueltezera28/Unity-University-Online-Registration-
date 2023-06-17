@@ -2,7 +2,7 @@
 session_start();
 include('database.php');
 
-$sql = "SELECT Fname,Lname,department.Department_name,student_data.batch,student_data.entry
+$sql = "SELECT Fname,Lname,department.Department_code,department.Department_name,student_data.batch,student_data.entry
          from student_data 
         join department 
         on student_data.department = department.Department_code 
@@ -11,6 +11,8 @@ $sql = "SELECT Fname,Lname,department.Department_name,student_data.batch,student
         where student_data.S_id={$_SESSION['student_id']} ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
+$dcode = $row['Department_code'];
+$_SESSION['dcode'] = "{$dcode}";
 ?>
 
 <!DOCTYPE html>
