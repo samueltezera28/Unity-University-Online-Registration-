@@ -149,7 +149,7 @@ function showevents() {
     };
 
     // Open the AJAX request and specify the URL of the HTML file to fetch
-    xhttp.open("GET", "./temp.html", true);
+    xhttp.open("GET", "./events.php", true);
 
     // Send the AJAX request
     xhttp.send();
@@ -169,7 +169,7 @@ function calculateGPA() {
         var gradeInput = rows[i].querySelector(".grade");
 
 
-        var creditHours = parseFloat(creditHoursInput.value);
+        var creditHours = parseFloat(creditHoursInput.innerHTML);
         var grade = gradeInput.value;
         console.log(creditHours);
         console.log(grade);
@@ -195,22 +195,16 @@ function calculateGradePoints(grade) {
             return 4.0;
         case "A":
             return 4.0;
-        case "A-":
-            return 3.7;
         case "B+":
-            return 3.3;
+            return 3.7;
         case "B":
             return 3.0;
-        case "B-":
-            return 2.7;
         case "C+":
-            return 2.3;
+            return 2.7;
         case "C":
             return 2.0;
-        case "C-":
-            return 1.7;
         case "D+":
-            return 1.3;
+            return 1.7;
         case "D":
             return 1.0;
         case "F":
