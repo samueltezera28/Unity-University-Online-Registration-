@@ -83,6 +83,13 @@ if (isset($_POST['submit'])) {
     if ($row = mysqli_fetch_array($sql)) {
         if ($password == $row['HashedPassword']) {
             $_SESSION['student_id'] = "{$username}";
+
+            $sql0 = "SELECT department FROM `student_data` where S_id=$username";
+            $result = $conn->query($sql0);
+            $row = $result->fetch_assoc();
+            $dep_code = $row['department'];
+            $_SESSION['student_dep'] = "{$dep_code}";
+
             header("location:../dashboard/home.php");
             exit();
         } else
