@@ -19,7 +19,7 @@ $sql1 = "SELECT * FROM `upcomming events` where student_id={$_SESSION['student_i
 <html>
 
 <head>
-    <title style="color:aliceblue;">Student Dashboard</title>
+    <title>Student Dashboard</title>
     <link rel="stylesheet" href="../dashboard/css/home.css">
     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -27,8 +27,9 @@ $sql1 = "SELECT * FROM `upcomming events` where student_id={$_SESSION['student_i
 
 <body>
 
-    <div class="header">
-        <h1>Student Dashboard</h1>
+    <div class="header" style="display: flex; align-items: center;">
+        <img src="../img/unity copy.png" alt="unity university logo" style="width: 80px;">
+        <h1 style="color:white; margin: 0 auto;">Student Dashboard</h1>
     </div>
     <div class="container-wrapper">
         <div class="nav">
