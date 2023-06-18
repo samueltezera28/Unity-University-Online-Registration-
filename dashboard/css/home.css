@@ -182,10 +182,20 @@ body {
 }
 
 .header {
+    display: flex;
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+.header img {
+    width: 100px;
+}
+
+.header h1 {
+    color: red;
+
 }
 
 .container-wrapper {
