@@ -7,6 +7,8 @@ $sql = "SELECT student_registration.Grade, course.code, course.title, course.Cre
     JOIN course ON student_registration.Course_Code = course.code 
     JOIN instructor ON student_registration.INSTID = instructor.INSTID
     WHERE student_registration.S_ID = {$_SESSION['student_id']} AND student_registration.Flag = 1";
+
+$sql1 = "SELECT * FROM course where course.code not in (select student_registration.Course_Code from student_registration where student_registration.S_ID={$_SESSION['student_id']} and course.department='dep01')"
 ?>
 
 <!DOCTYPE html>
@@ -52,37 +54,36 @@ $sql = "SELECT student_registration.Grade, course.code, course.title, course.Cre
         </tbody>
     </table>
 
-    <div class="gpa-calculator">
-        <h2>GPA Calculator</h2>
-        <p>Enter the credit hours and corresponding grades to calculate your GPA:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Credit Hours</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody id="gpa-table-body">
-                <?php
-                $result = $conn->query($sql);
+    <h2>Upcomming Courses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Course Cr</th>
+                <th>Course Type</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $result = $conn->query($sql1);
 
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>{$row['title']}</td>";
-                        echo "<td><input type='text' class='credit-hours' value='{$row['CreditHour']}'></td>";
-                        echo "<td><input type='text' class='grade' value='{$row['Grade']}'></td>";
-                        echo "</tr>";
-                    }
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>{$row['code']}</td>";
+                    echo "<td>{$row['title']}</td>";
+                    echo "<td>{$row['CreditHour']}</td>";
+                    echo "<td>{$row['type']}</td>";
+                    echo "<td>TBA</td>";
+                    echo "</tr>";
                 }
-                ?>
-            </tbody>
-        </table>
-        <p>Your GPA: <span id="gpa">-</span></p>
-        <button onclick="calculateGPA()">Calculate GPA</button>
-    </div>
-    <script src="./script/grade.js"></script>
+            }
+            ?>
+        </tbody>
+    </table>
+
 </body>
 
 </html>
