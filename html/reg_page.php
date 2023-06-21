@@ -57,11 +57,11 @@ if (isset($_POST['submit'])) {
             <div class="navigation">
                 <ul>
                     <i id="menu-close" class="fas fa-times"></i>
-                    <li><a class="active" href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="announcement.html">Announcement</a></li>
-                    <li><a href="./Register.php">Register</a></li>
-                    <li><a href="./login.php">Login</a></li>
+                    <li><a class="active" href="../index.html">Home</a></li>
+                    <li><a href="../html/about.html">About</a></li>
+                    <li><a href="../html/announcement.html">Announcement</a></li>
+                    <li><a href="../html/Register.php">Register</a></li>
+                    <li><a href="../html/login.php">Login</a></li>
                 </ul>
             </div>
         </nav>
