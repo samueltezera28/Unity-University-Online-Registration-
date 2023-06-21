@@ -77,9 +77,9 @@ nav .navigation ul li a:hover{
 }
 
 /* Home Section */
-  
- #home{
-    background-image: linear-gradient(rgba(5, 3, 32, 0.3),rgba(5, 4, 46, 0.7)),url(/img/uni.jpg);
+
+#home{
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3),rgba(5, 4, 46, 0.7)),url(/img/uni.jpg);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -92,29 +92,9 @@ nav .navigation ul li a:hover{
     padding: 40px;
 }
 
-.move1{
-    font-size:80px;
-    font-family: georgia;
-    font-style:normal;
-    font-weight:bold; 
-    color:#fff;
-    text-shadow: #2c2c2c;
-    letter-spacing: 1px;
-  }
-
-  .move2{
-    color:rgb(225, 255, 0);
-    font-size:50px;
-    font-family: Leelawadee UI Semilight;
-    font-style:normal;
-    font-weight:600;
-    letter-spacing: 1px;
-    text-shadow:#2c2c2c;
-  }
-
 #home h2{
     color: #fff;
-    
+    letter-spacing: 1px;
     font-size: 50px;
     margin-top: 80px;
 }
@@ -127,11 +107,9 @@ nav .navigation ul li a:hover{
     margin: 20px auto;
     font-weight: 450;
 }
-
 #home .btn{
     margin-top: 30px;
 }
-
 #home a{
     text-decoration: none;
     font-size: 0.9rem;
@@ -139,34 +117,28 @@ nav .navigation ul li a:hover{
     background-color: #fff;
     font-weight: 600;
     border-radius: 5px;
-} 
-
- #home  a.blue{
+}
+#home  a.blue{
     color: #fff;
     background: #009688;
     transition: 0.3s ease;
 }
-
 #home a.blue:hover{
     color: rgb(21, 21, 100);
     background: #FDC93B;;
 }
-
 #home  a.yellow{
     color: #fff;
     background: #009688;
     transition: 0.3s ease;
 
 }
-
 #home  a.yellow:hover{
     color: rgb(21, 21, 100);
     background: #FDC93B;
-}  
-
+} 
 
 /* Roadmap Section */
-
 
 #roadmap{
     padding: 5vw 8vw 0;
@@ -203,9 +175,7 @@ nav .navigation ul li a:hover{
     color: rgb(70, 70, 87);
 }
 
-
 /* Department Section */
-
 
 #dep{
     padding: 8vw 8vw 0 8vw;
@@ -234,18 +204,12 @@ nav .navigation ul li a:hover{
 #dep .deps .details{
     padding: 15px 15px 0 15px;
 }
-#dep .deps .details a{
-    color: rgba(0, 0, 0, 0.749);
-    text-decoration: none;
-}
 #dep .deps .details i{
     color: #FDC93B;
     font-size: .9rem;
 }
 
-
 /* Department Head Section */
-
 
 #dephead{
     padding: 8vw 8vw 8vw 8vw;
@@ -287,9 +251,7 @@ nav .navigation ul li a:hover{
     cursor:pointer;
 }
 
-
 /* Footer */
-
 
 footer{
     padding: 8vw;
@@ -386,9 +348,7 @@ footer .pro-links i:hover{
     color: #2c2c2c;
 }
 
-
 /* About Page Home Section */
-
 
 #about-home{
     background-image: linear-gradient(rgba(9, 5, 54, 0.3),rgba(5, 4, 46, 0.7)),url(/img/uni.jpg);
@@ -421,8 +381,6 @@ footer .pro-links i:hover{
 }
 
 #home-container .about-text{
-    /* width: 40%; */
-    /* padding: 70px; */
     text-align: left;
 }
 
@@ -436,9 +394,7 @@ footer .pro-links i:hover{
     font-weight: 500;
 }
 
-
 /* Trust Section */
-
 
 #trust{
     text-align: center;
@@ -458,7 +414,6 @@ footer .pro-links i:hover{
 
 
 /* Announcement Page Home Section */
-
 
 #post-container{
     display: flex;
