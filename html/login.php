@@ -11,22 +11,26 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="main-nav">
-            <img src="../img/Unity_University_logo.png" alt="" class="logo">
-            <ul class="main-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Apply</a></li>
-                <li><a href="#">Alumni</a></li>
-                <li><a href="./html/login.html">Login</a></li>
-            </ul>
-        </div>
-    </div>
 
+    <nav>
+        <img src="../img/u.png" alt="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="../index.html">Home</a></li>
+                <li><a class="active" href="../html/about.html">About</a></li>
+                <li><a href="../html/announcement.html">Announcement</a></li>
+                <li><a href="../html/reg_page.php">Register</a></li>
+                <li><a href="../html/login.php">Login</a></li>
+            </ul>
+            <i id="menu-btn" class="fas fa-bars"></i>
+        </div>
+    </nav>
     <div class="login">
         <div class="login-container">
             <form action="login.php" method="post" id="login" class="form">
